@@ -1,5 +1,30 @@
 # workproject
 
+Problem statement:
+You have a client that would like to keep track of the boreholes on a mine, as well as the water
+levels over time for each borehole.
+The client would like to have the following functionality:
+● See a list of all boreholes
+● Create new boreholes
+● Update the details of existing boreholes
+● Delete boreholes
+● Create water levels for a borehole
+● Update water levels for a borehole
+● Delete water levels for a borehole
+Boreholes have the following properties:
+● Name
+● Type
+● Latitude (In WGS84 format - This is the same format you see when using Google maps
+to see the latitude and longitude of a location)
+● Longitude (In WGS84 format)
+● Elevation (In meters [m])
+Water levels have the following properties:
+● Date
+● Reading (In meters below ground level [mbgl])
+Water levels need to be associated to boreholes appropriately.
+
+
+Solution
 
 
 Home page
