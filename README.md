@@ -1,5 +1,7 @@
 # workproject
 
+
+
 #Problem statement 
 
 You have a client that would like to keep track of the boreholes on a mine, as well as the water
@@ -23,6 +25,15 @@ Water levels have the following properties:
 ● Date
 ● Reading (In meters below ground level [mbgl])
 Water levels need to be associated to boreholes appropriately.
+
+
+Technology used:
+1. FrontEnd: angularJs, bootstrap
+2. backend: nodejs
+3. database: mysql
+
+Exception
+When you remove or edit waterlevel , the modal will close so you have to click the same borehole again to see the changes
 
 
 Solution
