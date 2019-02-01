@@ -1,6 +1,6 @@
 # workproject
 
-Problem statement:
+#Problem statement:
 You have a client that would like to keep track of the boreholes on a mine, as well as the water
 levels over time for each borehole.
 The client would like to have the following functionality:
