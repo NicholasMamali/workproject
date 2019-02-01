@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+
+    <head>
+
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
+
+
+        
+
+
+
+
+        <title></title>
+    </head>
+
+<body    ng-controller="AppCtrl">
+
+        <div class="container" >
+                <h3>Borehole app is running </h3>
+            <table class="table">
+                <thead>
+                        
+
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                        <th>Latitute</th>
+                        <th>Longitude</th>
+                        <th>Elevation</th>
+
+
+
+
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                        <tr>
+                                
+                            <td><input class="form-control" ng-model="borehole.name"></td>
+                            <td><input class="form-control" ng-model="borehole.type"></td>
+                            <td><input class="form-control" ng-model="borehole.longitude"></td>
+
+                            <td><input class="form-control" ng-model="borehole.latitude"></td>
+                            <td><input class="form-control" ng-model="borehole.elevation"></td>
+
+
+
+                            <td><button class="btn btn-primary" ng-click="addBorehole()">Add Borehole</button></td>
+                            <td><button class="btn btn-info" ng-click="update()">Update</button>&nbsp;&nbsp;</td>
+
+                        </tr>
+                       <!--This is just a loop, loop from the contact list array-->
+                        <tr ng-repeat="borehole in contactlist">
+                                <td>{{borehole.name}}</td>
+                                <td>{{borehole.type}}</td>
+                                <td>{{borehole.latitude}}</td>
+                                <td>{{borehole.longitude}}</td>
+                                <td>{{borehole.elevation}}</td>
+
+                                
+
+
+
+
+                                <td><button class="btn btn-danger" ng-click="remove(borehole.id)">Remove</button></td>
+                                <td><button class="btn btn-warning" ng-click="edit(borehole.id)">Edit</button></td>
+
+                                <td>
+
+
+                                    <button data-toggle="modal" data-target="#myModal" class="btn btn-primary" data-backdrop="false"   ng-click="mama(borehole.id)">waterlevel</button>
+                                </td>
+                                
+                        </tr>                        
+
+
+
+
+
+
+
+
+
+
+
+                </tbody>
+
+
+            </table>
+
+           
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.10/ngStorage.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.6/angular.min.js"></script>
+    <script src="controllers/controller.js"></script>
+
+
+
+
+
+
+
+    <div class="container">
+            <!-- Trigger the modal with a button -->
+          
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog" >
+              <div class="modal-dialog" style="width:1250px;">
+              
+                <!-- Modal content-->
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Modal Header</h4>
+                  </div>
+                  <div class="modal-body" >
+
+
+
+                        <div class="container" >
+
+
+
+                                <h2> Borehole of ID: {{check}}</h2>
+                                    
+
+                                <h3>Water Level for a specific borehole</h3>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>Readings</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                
+                                        <tr>
+                                            <td><input class="form-control" ng-model="water.date" type="date"></td>
+                                            <td><input class="form-control" ng-model="water.readings"></td>
+                
+                
+                                            <td><button class="btn btn-primary" ng-click="addWater(check)">Add waterLevel</button></td>
+                                            <td><button class="btn btn-info" ng-click="updateWater(idp)">Update</button>&nbsp;&nbsp;</td>
+                
+                
+                                        </tr>
+                                       <!--This is just a loop, loop from the contact list array-->
+                                        <tr ng-repeat="borehole in waterlist">
+                                                <td>{{borehole.date}}</td>
+                                                <td>{{borehole.readings}}</td>
+
+                                            
+                                                <td><button class="btn btn-danger" ng-click="removeWater(borehole.id)">Remove</button></td>
+                                                <td><button class="btn btn-warning" ng-click="editWater(borehole.id)">Edit</button></td>
+                
+                
+                                        </tr>
+                
+                
+                                </tbody>
+                
+                
+                            </table>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                            
+                
+                    </div>
+                
+
+
+
+
+
+
+
+
+
+
+ </script>
+
+
+
+
+
+
+
+                </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
+            
+          </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>
